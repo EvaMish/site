@@ -1,0 +1,50 @@
+drop database if exists Workshop;
+create database Workshop;
+
+use Workshop;
+
+create table Users(
+id_us int auto_increment primary key,
+nam varchar(30) not null,
+numb long not null,
+mail varchar(30) not null,
+pass varchar(30) not null
+
+);
+
+create table Product(
+id_prod int auto_increment primary key,
+prod_name varchar(30) not null,
+price int not null,
+specif varchar(30) not null,
+photo varchar(30) not null
+);
+
+create table Orders(
+id_ord int auto_increment primary key,
+id_us int not null,
+id_prod int not null,
+dat_ord varchar(30) not null,
+total_price int not null,
+is_done bool not null,
+count_prod int not null,
+foreign key (id_us) references Users(id_us) on update cascade on delete cascade,
+foreign key (id_prod) references Product(id_prod) on update cascade on delete cascade
+);
+
+create table ShopCart(
+id_c  int auto_increment primary key,
+id_us int,
+id_prod int,
+sum_price int,
+foreign key (id_us) references Users(id_us) on update cascade on delete cascade,
+foreign key (id_prod) references Product(id_prod) on update cascade on delete cascade
+);
+
+insert into Users values(default,"Elena",80296802013,"ekragel@bk.ru","eva2002");
+insert into Product values(default,"Table",1200,"bla","photo");
+/*insert into Orders values(default,1,1,"2021-09-09",1200,true,1);
+*/
+select* from Users;
+select* from Product;
+select* from Orders;
