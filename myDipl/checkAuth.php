@@ -1,6 +1,6 @@
 <?php
 session_start();
-$link = mysqli_connect("localhost", "root", "123456", "workshop");
+$link = mysqli_connect("localhost", "root", "", "workshop");
 if($_POST != NULL)
 {
     $email = $_POST['email'];

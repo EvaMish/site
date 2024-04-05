@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connect = mysqli_connect("localhost", "root", "123456", "workshop");
+$connect = mysqli_connect("localhost", "root", "", "workshop");
 $query = "select * from `product` inner join `ShopCart` on Product.id_prod=ShopCart.id_prod";
 $result1 = mysqli_query($connect, $query);
 ?>
@@ -48,7 +48,7 @@ $result1 = mysqli_query($connect, $query);
 
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/diplomNew/myDipl/Glav.php" class="nav-link px-2 text-white">LoftPRO</a></li>
+          <li><a href="/site/myDipl/Glav.php" class="nav-link px-2 text-white">LoftPRO</a></li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -56,18 +56,18 @@ $result1 = mysqli_query($connect, $query);
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
 
-              <li><a class="dropdown-item" href="/diplomNew/myDipl/Maf.php">Малые архитектурные формы</a></li>
-              <li><a class="dropdown-item" href="/diplomNew/myDipl/Sad.php">Садово-парковая мебель</a></li>
-              <li><a class="dropdown-item" href="/diplomNew/myDipl/Top.php">Топиарные и светодиодные фигуры</a></li>
+              <li><a class="dropdown-item" href="/site/myDipl/Maf.php">Малые архитектурные формы</a></li>
+              <li><a class="dropdown-item" href="/site/myDipl/Sad.php">Садово-парковая мебель</a></li>
+              <li><a class="dropdown-item" href="/site/myDipl/Top.php">Топиарные и светодиодные фигуры</a></li>
             </ul>
           </li>
-          <li><a class="nav-link px-2 text-secondary" href="/diplomNew/myDipl/Info.html">О нас</a></li>
+          <li><a class="nav-link px-2 text-secondary" href="/site/myDipl/Info.html">О нас</a></li>
 
           <li><a class="nav-link px-2 text-secondary" href="Cart.php">Корзина</a></li>
         </ul>
 
 
-        <form class="d-flex" action="/diplomNew/myDipl/Search.php" method="post">
+        <form class="d-flex" action="/site/myDipl/Search.php" method="post">
           <input class="form-control me-2" type="text" placeholder="Поиск" aria-label="Поиск" id="searchText" name="searchText">
           <input type="submit" class="btn btn-outline-success" value="Поиск"></a>
 
@@ -77,7 +77,7 @@ $result1 = mysqli_query($connect, $query);
 
         <div class="text-end" style="margin-left:10px;">
 
-          <a class="btn btn-outline-primary" href="/diplomNew/myDipl/Glav.php">Войти</a>
+          <a class="btn btn-outline-primary" href="/site/myDipl/Glav.php">Войти</a>
         </div>
       </div>
     </div>
@@ -106,7 +106,7 @@ $result1 = mysqli_query($connect, $query);
                   <button class="btn btn-danger ml-3" type="button">Удалить</button></a></td> -->
             </div>
             <div class="image">
-              <img src="/diplomNew/myDipl/img/<?php echo $row1['photo']; ?>" width="120px" height="80px" />
+              <img src="/site/myDipl/img/<?php echo $row1['photo']; ?>" width="120px" height="80px" />
             </div>
 
             <div class="description">

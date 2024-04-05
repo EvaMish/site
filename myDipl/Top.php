@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connect = mysqli_connect("localhost", "root", "123456", "workshop");
+$connect = mysqli_connect("localhost", "root", "", "workshop");
 $query = "SELECT * FROM `product` where id_prod = 13 and kat='Top'";
 $query1 = "SELECT * FROM `product` where id_prod = 14 and kat='Top'";
 $query2 = "SELECT * FROM `product` where id_prod = 15 and kat='Top'";
@@ -78,7 +78,7 @@ $row_cart  = mysqli_fetch_array($result_cart);
           </li>
           <li><a class="nav-link px-2 text-secondary" href="Info.html">О нас</a></li>
 
-          <li><a class="nav-link px-2 text-secondary" href="/diplomNew/myDipl/Cart/Cart.php">Корзина</a></li>
+          <li><a class="nav-link px-2 text-secondary" href="/site/myDipl/Cart/Cart.php">Корзина</a></li>
           <li>
             <!--?php
             if (isset($_SESSION['id_us'])) {

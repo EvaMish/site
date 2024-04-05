@@ -50,7 +50,7 @@
         </li>
           <li><a  class="nav-link px-2 text-secondary" href="Info.html">О нас</a></li>
           
-          <li><a  class="nav-link px-2 text-secondary" href="/diplomNew/myDipl/Cart/Cart.php">Корзина</a></li>
+          <li><a  class="nav-link px-2 text-secondary" href="/site/myDipl/Cart/Cart.php">Корзина</a></li>
         </ul>
 
         <form class="d-flex" action="Search.php" method="post">
@@ -81,7 +81,7 @@
 
 <?php
 
-$link = mysqli_connect("localhost", "root", "123456", "workshop");
+$link = mysqli_connect("localhost", "root", "", "workshop");
 if($_POST != NULL)
 {
     $searchText = $_POST['searchText'];         
